@@ -1,129 +1,192 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="ur" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TechFaisla — Mobile Reviews &amp; Buying Guides</title>
-<meta name="description" content="Honest mobile phone reviews, comparisons aur buying guides — Urdu aur English dono mein.">
-<link rel="stylesheet" href="style.css">
+<title>Tech Faisla — Mobile Reviews in Urdu &amp; English</title>
+<meta name="description" content="Budget aur flagship mobile phones ki honest reviews, Urdu aur English mein.">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#0B0F19;
+    color:#E4E9F0;
+    font-family: -apple-system, 'Segoe UI', Roboto, Inter, sans-serif;
+    line-height:1.5;
+  }
+  a { text-decoration:none; color:inherit; }
+
+  /* Header */
+  header {
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 20px;
+    border-bottom:1px solid #1B2231;
+    position:sticky; top:0; background:#0B0F19; z-index:10;
+  }
+  .logo { font-size:22px; font-weight:800; letter-spacing:-0.5px; }
+  .logo span { color:#F4A94A; }
+  .menu-btn {
+    width:42px; height:42px; border:1px solid #2A3345; border-radius:8px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .menu-btn div { width:18px; height:2px; background:#E4E9F0; position:relative; }
+  .menu-btn div::before, .menu-btn div::after {
+    content:''; position:absolute; width:18px; height:2px; background:#E4E9F0; left:0;
+  }
+  .menu-btn div::before { top:-6px; }
+  .menu-btn div::after { top:6px; }
+
+  /* Hero */
+  .hero { padding:36px 20px 24px; }
+  .hero-eyebrow {
+    color:#2DD4BF; font-family:'Courier New', monospace; font-size:13px;
+    letter-spacing:2px; text-transform:uppercase; margin-bottom:12px;
+  }
+  .hero h1 { font-size:34px; font-weight:800; line-height:1.15; margin-bottom:14px; }
+  .hero p { color:#94A3B8; font-size:16px; max-width:520px; }
+
+  /* Section title */
+  .section-title {
+    padding:8px 20px 16px; font-size:13px; letter-spacing:2px;
+    text-transform:uppercase; color:#64748B; font-family:'Courier New', monospace;
+    border-top:1px solid #1B2231; margin-top:24px; padding-top:24px;
+  }
+
+  /* Card grid */
+  .grid { display:grid; grid-template-columns:1fr; gap:18px; padding:0 20px 30px; }
+  @media(min-width:640px){ .grid{ grid-template-columns:1fr 1fr; } }
+
+  .card {
+    background:#111826; border:1px solid #1E2637; border-radius:14px;
+    overflow:hidden; transition:border-color .2s;
+  }
+  .card:active { border-color:#2DD4BF; }
+
+  .card-media {
+    height:180px; position:relative; overflow:hidden;
+    background:linear-gradient(160deg, #1A2333 0%, #0E1420 100%);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .card-media img {
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+  .phone-fallback {
+    width:70px; height:130px; border:3px solid #3A4560; border-radius:14px;
+    position:relative; background:#161E2E;
+  }
+  .phone-fallback::before {
+    content:''; position:absolute; top:10px; left:8px; right:8px; bottom:16px;
+    background:linear-gradient(160deg,#2DD4BF33,#F4A94A22); border-radius:4px;
+  }
+  .phone-fallback::after {
+    content:''; position:absolute; bottom:6px; left:50%; transform:translateX(-50%);
+    width:24px; height:3px; background:#3A4560; border-radius:2px;
+  }
+
+  .badge {
+    position:absolute; top:10px; left:10px;
+    background:#0B0F19CC; color:#2DD4BF; font-family:'Courier New', monospace;
+    font-size:11px; letter-spacing:1px; padding:4px 9px; border-radius:6px;
+    border:1px solid #2DD4BF44; text-transform:uppercase;
+  }
+
+  .card-body { padding:16px; }
+  .card-body h3 { font-size:19px; font-weight:700; margin-bottom:8px; line-height:1.25; }
+  .card-body p { color:#8B96A8; font-size:14px; margin-bottom:14px; }
+
+  .specs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+  .specs span {
+    font-family:'Courier New', monospace; font-size:11.5px; color:#B7C0CE;
+    background:#0B0F19; border:1px solid #232C3E; padding:4px 8px; border-radius:6px;
+  }
+
+  .card-footer {
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:12px; border-top:1px solid #1E2637;
+  }
+  .price { font-family:'Courier New', monospace; font-weight:700; color:#F4A94A; font-size:15px; }
+  .read-btn {
+    background:#2DD4BF; color:#08111A; font-weight:700; font-size:13px;
+    padding:8px 14px; border-radius:8px;
+  }
+
+  footer {
+    padding:26px 20px 40px; text-align:center; color:#5B6576; font-size:12.5px;
+    border-top:1px solid #1B2231; margin-top:10px;
+  }
+  footer a { color:#2DD4BF; }
+</style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap">
-    <a href="index.html" class="logo">Tech<span class="dot">Faisla</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.main-nav').classList.toggle('open')">☰</button>
-    <nav class="main-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="review-sample.html">Reviews</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </nav>
-  </div>
+<header>
+  <div class="logo">Tech <span>Faisla</span></div>
+  <div class="menu-btn"><div></div></div>
 </header>
 
 <section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Latest Review · تازہ ترین جائزہ</div>
-    <h1>Har phone kharidne se pehle, yahan check karein.</h1>
-    <p class="sub">Real usage, real cameras, real battery numbers — no marketing fluff. Har review hands-on testing ke baad likha jata hai.</p>
-    <p class="sub ur">ہر فون خریدنے سے پہلے حقیقی استعمال، کیمرہ اور بیٹری ٹیسٹ کی مکمل تفصیل یہاں پڑھیں — بغیر کسی مبالغہ آرائی کے۔</p>
-    <div class="spec-strip">
-      <span><b>120+</b> phones reviewed</span>
-      <span><b>Urdu + English</b> content</span>
-      <span><b>Updated weekly</b></span>
-    </div>
-  </div>
+  <div class="hero-eyebrow">Mobile Reviews</div>
+  <h1>Sahi phone chunne ka faisla, ab aasan.</h1>
+  <p>Budget se flagship tak — har phone ka honest review, real specs aur seedhi baat, Urdu aur English mein.</p>
 </section>
 
-<div class="wrap">
+<div class="section-title">Latest Reviews</div>
 
-  <div class="ad-slot">AdSense display unit — homepage top (insert your ad code here)</div>
+<div class="grid">
 
-  <div class="section-head">
-    <h2>Latest Reviews</h2>
-    <a class="see-all" href="review-sample.html">See all →</a>
-  </div>
+  <!-- Redmi Note 14 Pro -->
+  <a class="card" href="redmi-note-14-pro.html">
+    <div class="card-media">
+      <span class="badge">Mid-Range</span>
+      <img src="images/redmi-note-14-pro.jpg" alt="Redmi Note 14 Pro"
+           onerror="this.style.display='none'; this.parentElement.querySelector('.phone-fallback').style.display='block';">
+      <div class="phone-fallback" style="display:none; position:absolute;"></div>
+    </div>
+    <div class="card-body">
+      <h3>Redmi Note 14 Pro — Full Review</h3>
+      <p>AMOLED display, stable performance aur safe recommendation is price range mein.</p>
+      <div class="specs">
+        <span>6.67" AMOLED</span>
+        <span>120Hz</span>
+        <span>108MP</span>
+      </div>
+      <div class="card-footer">
+        <span class="price">PKR 55,999</span>
+        <span class="read-btn">Read →</span>
+      </div>
+    </div>
+  </a>
 
-  <div class="grid">
-    <a class="card" href="review-sample.html">
-      <div class="cat">Flagship</div>
-      <h3>Galaxy S26 Ultra — Full Review</h3>
-      <p>Camera, battery aur real-world performance ka mukammal jaiza. Kya yeh apgrade ke qabil hai?</p>
-      <div class="card-foot">
-        <span class="signal fill-4"><i></i><i></i><i></i><i></i><i></i></span>
-        <span class="price-tag">PKR 3,89,999</span>
+  <!-- Infinix Hot 60 Pro -->
+  <a class="card" href="infinix-hot-60-pro.html">
+    <div class="card-media">
+      <span class="badge">Budget</span>
+      <img src="images/infinix-hot-60-pro.jpg" alt="Infinix Hot 60 Pro"
+           onerror="this.style.display='none'; this.parentElement.querySelector('.phone-fallback').style.display='block';">
+      <div class="phone-fallback" style="display:none; position:absolute;"></div>
+    </div>
+    <div class="card-body">
+      <h3>Infinix Hot 60 Pro — Full Review</h3>
+      <p>144Hz AMOLED display is price range mein — 2026 ka best value budget phone.</p>
+      <div class="specs">
+        <span>144Hz AMOLED</span>
+        <span>45W Charging</span>
+        <span>8GB RAM</span>
       </div>
-    </a>
-    <a class="card" href="review-sample.html">
-      <div class="cat">Mid-Range</div>
-      <h3>Redmi Note 15 Pro — Value King?</h3>
-      <p>Under 60k budget mein best cameras aur battery life — hands-on test ke saath.</p>
-      <div class="card-foot">
-        <span class="signal fill-4"><i></i><i></i><i></i><i></i><i></i></span>
-        <span class="price-tag">PKR 58,999</span>
+      <div class="card-footer">
+        <span class="price">PKR 45,000</span>
+        <span class="read-btn">Read →</span>
       </div>
-    </a>
-    <a class="card" href="review-sample.html">
-      <div class="cat">Comparison</div>
-      <h3>iPhone 17 vs Pixel 10 — Camera Face-off</h3>
-      <p>Low light, portrait aur video — kaunsa phone jeeta detailed sample shots ke saath.</p>
-      <div class="card-foot">
-        <span class="signal fill-5"><i></i><i></i><i></i><i></i><i></i></span>
-        <span class="price-tag">Comparison</span>
-      </div>
-    </a>
-  </div>
-
-  <div class="section-head">
-    <h2>Buying Guides · خریداری گائیڈ</h2>
-  </div>
-
-  <div class="grid">
-    <a class="card" href="review-sample.html">
-      <div class="cat">Guide</div>
-      <h3>Best Phones Under PKR 50,000 (2026)</h3>
-      <p>Tight budget mein sabse acha camera aur performance — top 5 picks.</p>
-      <div class="card-foot">
-        <span class="signal fill-3"><i></i><i></i><i></i><i></i><i></i></span>
-        <span class="price-tag">Guide</span>
-      </div>
-    </a>
-    <a class="card" href="review-sample.html">
-      <div class="cat">Guide</div>
-      <h3>Long Battery Life Phones — 2026 List</h3>
-      <p>Un logon ke liye jo pura din charge ki tension nahi lena chahte.</p>
-      <div class="card-foot">
-        <span class="signal fill-4"><i></i><i></i><i></i><i></i><i></i></span>
-        <span class="price-tag">Guide</span>
-      </div>
-    </a>
-    <a class="card" href="review-sample.html">
-      <div class="cat">Guide</div>
-      <h3>Delivery Riders ke liye Best Phone</h3>
-      <p>Tough battery, GPS accuracy aur drop-resistance — rider-friendly picks.</p>
-      <div class="card-foot">
-        <span class="signal fill-5"><i></i><i></i><i></i><i></i><i></i></span>
-        <span class="price-tag">Guide</span>
-      </div>
-    </a>
-  </div>
-
-  <div class="ad-slot">AdSense display unit — homepage bottom (insert your ad code here)</div>
+    </div>
+  </a>
 
 </div>
 
 <footer>
-  <div class="wrap">
-    <span>© 2026 TechFaisla. Sab huqooq mehfooz.</span>
-    <div class="foot-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </div>
-  </div>
+  © 2026 Tech Faisla. Sab reviews independent hain.
+  <br><a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy</a>
 </footer>
 
 </body>
 </html>
+
+ 
