@@ -15,18 +15,32 @@
   }
   a { text-decoration:none; color:inherit; }
 
-  /* Header */
+  .ticker-wrap {
+    background:#F4A94A; overflow:hidden; white-space:nowrap;
+    padding:7px 0; position:relative;
+  }
+  .ticker {
+    display:inline-block; padding-left:100%;
+    animation: ticker-scroll 16s linear infinite;
+    color:#0B0F19; font-weight:700; font-size:13px; font-family:'Courier New', monospace;
+  }
+  @keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
   header {
     display:flex; align-items:center; justify-content:space-between;
     padding:18px 20px;
     border-bottom:1px solid #1B2231;
-    position:sticky; top:0; background:#0B0F19; z-index:10;
+    position:sticky; top:0; background:#0B0F19; z-index:20;
   }
   .logo { font-size:22px; font-weight:800; letter-spacing:-0.5px; }
   .logo span { color:#F4A94A; }
   .menu-btn {
     width:42px; height:42px; border:1px solid #2A3345; border-radius:8px;
     display:flex; align-items:center; justify-content:center;
+    background:transparent; cursor:pointer;
   }
   .menu-btn div { width:18px; height:2px; background:#E4E9F0; position:relative; }
   .menu-btn div::before, .menu-btn div::after {
@@ -35,7 +49,22 @@
   .menu-btn div::before { top:-6px; }
   .menu-btn div::after { top:6px; }
 
-  /* Hero */
+  .nav-wrap { position:relative; }
+  .dropdown {
+    position:absolute; top:56px; right:0; width:200px;
+    background:#111826; border:1px solid #232C3E; border-radius:12px;
+    overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.5);
+    opacity:0; visibility:hidden; transform:translateY(-8px);
+    transition:all .18s ease;
+  }
+  .dropdown.open { opacity:1; visibility:visible; transform:translateY(0); }
+  .dropdown a {
+    display:block; padding:14px 18px; font-size:15px; color:#E4E9F0;
+    border-bottom:1px solid #1B2231;
+  }
+  .dropdown a:last-child { border-bottom:none; }
+  .dropdown a:active { background:#1A2333; color:#2DD4BF; }
+
   .hero { padding:36px 20px 24px; }
   .hero-eyebrow {
     color:#2DD4BF; font-family:'Courier New', monospace; font-size:13px;
@@ -44,20 +73,18 @@
   .hero h1 { font-size:34px; font-weight:800; line-height:1.15; margin-bottom:14px; }
   .hero p { color:#94A3B8; font-size:16px; max-width:520px; }
 
-  /* Section title */
   .section-title {
     padding:8px 20px 16px; font-size:13px; letter-spacing:2px;
     text-transform:uppercase; color:#64748B; font-family:'Courier New', monospace;
     border-top:1px solid #1B2231; margin-top:24px; padding-top:24px;
   }
 
-  /* Card grid */
   .grid { display:grid; grid-template-columns:1fr; gap:18px; padding:0 20px 30px; }
   @media(min-width:640px){ .grid{ grid-template-columns:1fr 1fr; } }
 
   .card {
     background:#111826; border:1px solid #1E2637; border-radius:14px;
-    overflow:hidden; transition:border-color .2s;
+    overflow:hidden; transition:border-color .2s; display:block;
   }
   .card:active { border-color:#2DD4BF; }
 
@@ -66,9 +93,7 @@
     background:linear-gradient(160deg, #1A2333 0%, #0E1420 100%);
     display:flex; align-items:center; justify-content:center;
   }
-  .card-media img {
-    width:100%; height:100%; object-fit:cover; display:block;
-  }
+  .card-media img { width:100%; height:100%; object-fit:cover; display:block; }
   .phone-fallback {
     width:70px; height:130px; border:3px solid #3A4560; border-radius:14px;
     position:relative; background:#161E2E;
@@ -118,9 +143,23 @@
 </head>
 <body>
 
+<div class="ticker-wrap">
+  <div class="ticker">🔥 NAYA ARTICLE HAR ROZ — Budget se flagship tak, honest phone reviews Urdu mein &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔥 NAYA ARTICLE HAR ROZ — Budget se flagship tak, honest phone reviews Urdu mein</div>
+</div>
+
 <header>
   <div class="logo">Tech <span>Faisla</span></div>
-  <div class="menu-btn"><div></div></div>
+  <div class="nav-wrap">
+    <div class="menu-btn" onclick="document.getElementById('navMenu').classList.toggle('open')">
+      <div></div>
+    </div>
+    <div class="dropdown" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
 </header>
 
 <section class="hero">
@@ -133,7 +172,6 @@
 
 <div class="grid">
 
-  <!-- Redmi Note 14 Pro -->
   <a class="card" href="redmi-note-14-pro.html">
     <div class="card-media">
       <span class="badge">Mid-Range</span>
@@ -156,7 +194,6 @@
     </div>
   </a>
 
-  <!-- Infinix Hot 60 Pro -->
   <a class="card" href="infinix-hot-60-pro.html">
     <div class="card-media">
       <span class="badge">Budget</span>
@@ -188,5 +225,3 @@
 
 </body>
 </html>
-
- 
