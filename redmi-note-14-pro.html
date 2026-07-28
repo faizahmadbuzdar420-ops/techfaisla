@@ -1,45 +1,120 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="ur" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Redmi Note 14 Pro Review — TechFaisla</title>
 <meta name="description" content="Redmi Note 14 Pro ka mukammal review — kya yeh 45k budget mein best phone hai?">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Noto+Nastaliq+Urdu:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#16233F; --navy-deep:#0E1830;
+    --paper:#F6F3ED; --paper-dim:#EDE8DD;
+    --ink:#21262E; --slate:#7C8393;
+    --green:#35C488; --amber:#E2A63B;
+    --line: rgba(22,35,63,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:'Inter', sans-serif; -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+
+  header{position:sticky; top:0; z-index:50; background:var(--paper); border-bottom:1px solid var(--line);}
+  .nav-wrap{max-width:900px; margin:0 auto; padding:16px 20px; display:flex; align-items:center; justify-content:space-between;}
+  .logo{display:flex; align-items:center; gap:10px;}
+  .logo-mark{width:34px; height:34px; border-radius:8px; background:var(--navy); color:var(--paper); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono'; font-weight:700; font-size:14px;}
+  .logo-text{font-family:'Space Grotesk'; font-weight:700; font-size:18px; letter-spacing:-0.01em;}
+  .logo-text span{color:var(--amber);}
+  .back-link{font-family:'JetBrains Mono'; font-size:13px; color:var(--navy); border:1px solid var(--line); padding:7px 12px; border-radius:100px;}
+
+  .breadcrumb{max-width:900px; margin:20px auto 0; padding:0 20px; font-family:'JetBrains Mono'; font-size:12px; color:var(--slate);}
+
+  .article-head{max-width:900px; margin:0 auto; padding:20px 20px 32px;}
+  .tag-pill{display:inline-block; background:var(--amber); color:var(--navy-deep); font-family:'JetBrains Mono'; font-size:11px; font-weight:700; padding:5px 10px; border-radius:6px; margin-bottom:16px;}
+  h1.title{font-family:'Space Grotesk'; font-weight:700; font-size:clamp(28px,5vw,42px); line-height:1.1; letter-spacing:-0.02em; max-width:760px;}
+  .lede{margin-top:16px; color:var(--slate); font-size:16px; line-height:1.6; max-width:680px;}
+
+  .specs-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:20px;}
+  .specs-row span{font-family:'JetBrains Mono'; font-size:12.5px; color:var(--navy); background:#fff; border:1px solid var(--line); padding:7px 12px; border-radius:8px;}
+
+  .verdict-tag{background:var(--navy); color:var(--paper); border-radius:14px; padding:18px 20px; margin-top:24px; display:flex; align-items:center; gap:16px;}
+  .verdict-score{font-family:'JetBrains Mono'; font-weight:700; font-size:26px; background:var(--green); color:var(--navy-deep); width:60px; height:60px; border-radius:10px; flex-shrink:0; display:flex; align-items:center; justify-content:center;}
+  .verdict-info .name{font-family:'Space Grotesk'; font-weight:600; font-size:16px;}
+  .verdict-info .price{font-family:'JetBrains Mono'; font-size:13px; color:var(--amber); margin-top:2px;}
+
+  .prose{max-width:760px; margin:0 auto; padding:8px 20px 40px; font-size:16px; line-height:1.75;}
+  .prose h2{font-family:'Space Grotesk'; font-weight:700; font-size:22px; margin:36px 0 14px; padding-top:24px; border-top:1px solid var(--line);}
+  .prose h2:first-of-type{border-top:none; padding-top:0; margin-top:8px;}
+  .prose p{margin-bottom:16px; color:var(--ink);}
+  .prose p.ur, .prose h2.ur{font-family:'Noto Nastaliq Urdu', serif; direction:rtl; text-align:right; font-size:18px; line-height:2;}
+
+  .ad-slot{margin:30px 0; padding:24px 16px; border:1px dashed var(--line); border-radius:10px; text-align:center; font-family:'JetBrains Mono'; font-size:12px; color:var(--slate);}
+
+  /* ratings block, echoing the verdict-tag score style */
+  .ratings-box{max-width:760px; margin:0 auto 8px; padding:0 20px;}
+  .ratings-box .box{background:#fff; border:1px solid var(--line); border-radius:14px; padding:8px 20px;}
+  .rating-row{display:flex; align-items:center; justify-content:space-between; padding:14px 0; border-bottom:1px dashed var(--line);}
+  .rating-row:last-child{border-bottom:none;}
+  .rating-row .label{font-family:'Space Grotesk'; font-weight:600; font-size:14.5px;}
+  .signal{display:flex; gap:4px;}
+  .signal i{width:8px; height:20px; border-radius:2px; background:var(--paper-dim); display:inline-block;}
+  .signal.fill-3 i:nth-child(-n+3), .signal.fill-4 i:nth-child(-n+4), .signal.fill-5 i:nth-child(-n+5){background:var(--green);}
+
+  .specs-table{width:100%; border-collapse:collapse; margin-top:8px; background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden;}
+  .specs-table td{padding:13px 16px; font-size:14.5px; border-bottom:1px dashed var(--line);}
+  .specs-table tr:last-child td{border-bottom:none;}
+  .specs-table td:first-child{font-family:'JetBrains Mono'; color:var(--slate); width:35%;}
+  .specs-table td:last-child{font-family:'Space Grotesk'; font-weight:600;}
+
+  .final-verdict{max-width:760px; margin:32px auto; padding:0 20px;}
+  .final-verdict .box{background:var(--navy); color:var(--paper); border-radius:16px; padding:28px;}
+  .final-verdict h3{font-family:'Space Grotesk'; font-size:18px; margin-bottom:10px; color:var(--amber);}
+  .final-verdict p{color:rgba(246,243,237,0.85); font-size:16px; line-height:1.9; font-family:'Noto Nastaliq Urdu', serif; direction:rtl; text-align:right;}
+
+  footer{background:var(--navy); color:rgba(246,243,237,0.6); padding:32px 20px 40px; margin-top:40px; text-align:center; font-size:12.5px;}
+  .footer-inner{max-width:900px; margin:0 auto;}
+  footer a{color:var(--amber);}
+  footer .links{margin-top:10px;}
+</style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="wrap">
-    <a href="index.html" class="logo">Tech<span class="dot">Faisla</span></a>
-    <button class="menu-toggle" onclick="document.querySelector('.main-nav').classList.toggle('open')">☰</button>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="review-sample.html">Reviews</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </nav>
+<header>
+  <div class="nav-wrap">
+    <div class="logo">
+      <div class="logo-mark">TF</div>
+      <div class="logo-text">Tech<span>Faisla</span></div>
+    </div>
+    <a class="back-link" href="index.html">← Home</a>
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Budget Review</div>
-    <h1>Redmi Note 14 Pro — Full Review</h1>
-    <p class="sub">45k budget mein kya yeh phone sabse acha option hai? Do hafte ke real use ke baad hamara verdict.</p>
-    <div class="spec-strip">
-      <span><b>6.67"</b> AMOLED</span>
-      <span><b>108MP</b> camera</span>
-      <span><b>5,000mAh</b> battery</span>
-      <span><b>PKR 44,999</b></span>
+<div class="breadcrumb"><a href="index.html">Home</a> → Reviews → Redmi Note 14 Pro</div>
+
+<div class="article-head">
+  <span class="tag-pill">BUDGET REVIEW</span>
+  <h1 class="title">Redmi Note 14 Pro — Full Review</h1>
+  <p class="lede">45k budget mein kya yeh phone sabse acha option hai? Do hafte ke real use ke baad hamara verdict.</p>
+
+  <div class="specs-row">
+    <span>6.67" AMOLED</span>
+    <span>108MP camera</span>
+    <span>5,000mAh battery</span>
+    <span>PKR 44,999</span>
+  </div>
+
+  <div class="verdict-tag">
+    <div class="verdict-score">8.6</div>
+    <div class="verdict-info">
+      <div class="name">Overall Verdict</div>
+      <div class="price">PKR 44,999</div>
     </div>
   </div>
-</section>
+</div>
 
-<article class="article-body">
-
-  <div class="ad-slot">AdSense in-article unit (insert your ad code here)</div>
+<div class="prose">
+  <div class="ad-slot">AdSense in-article unit</div>
 
   <h2>Design aur Build Quality</h2>
   <p>Is price range mein phone ka build quality expectation se behtar hai. Back panel curved hai jo haath mein acha grip deta hai, aur weight bhi zyada nahi lagta. Din bhar jeb mein rakhne ya use karne mein koi mushkil nahi hoti.</p>
@@ -49,14 +124,18 @@
 
   <h2>Battery aur Performance</h2>
   <p>Normal use mein phone pura din asani se chal jata hai. Gaming ya heavy apps mein bhi phone garam nahi hota jaldi, jo daily use — jaise navigation ya calls — ke liye reliable banata hai.</p>
+</div>
 
-  <div class="verdict-box">
-    <div class="row"><span>Camera</span><span class="signal fill-4"><i></i><i></i><i></i><i></i><i></i></span></div>
-    <div class="row"><span>Battery Life</span><span class="signal fill-4"><i></i><i></i><i></i><i></i><i></i></span></div>
-    <div class="row"><span>Performance</span><span class="signal fill-3"><i></i><i></i><i></i><i></i><i></i></span></div>
-    <div class="row"><span>Value for Money</span><span class="signal fill-5"><i></i><i></i><i></i><i></i><i></i></span></div>
+<div class="ratings-box">
+  <div class="box">
+    <div class="rating-row"><span class="label">Camera</span><span class="signal fill-4"><i></i><i></i><i></i><i></i><i></i></span></div>
+    <div class="rating-row"><span class="label">Battery Life</span><span class="signal fill-4"><i></i><i></i><i></i><i></i><i></i></span></div>
+    <div class="rating-row"><span class="label">Performance</span><span class="signal fill-3"><i></i><i></i><i></i><i></i><i></i></span></div>
+    <div class="rating-row"><span class="label">Value for Money</span><span class="signal fill-5"><i></i><i></i><i></i><i></i><i></i></span></div>
   </div>
+</div>
 
+<div class="prose">
   <h2>Mukammal Specs</h2>
   <table class="specs-table">
     <tr><td>Display</td><td>6.67" AMOLED, 120Hz</td></tr>
@@ -65,22 +144,23 @@
     <tr><td>Storage</td><td>128GB / 256GB</td></tr>
     <tr><td>Price</td><td>PKR 44,999</td></tr>
   </table>
+</div>
 
-  <h2 class="ur">حتمی رائے</h2>
-  <p class="ur">اگر آپ کا بجٹ 45 ہزار کے قریب ہے اور آپ کو ایک بھروسہ مند، اچھی بیٹری لائف والا فون چاہیے، تو یہ ایک عمدہ انتخاب ہے۔ خاص طور پر ڈیلیوری یا فیلڈ ورک کرنے والوں کے لیے بہترین ہے۔</p>
+<div class="final-verdict">
+  <div class="box">
+    <h3 style="direction:ltr; text-align:left;">حتمی رائے — Final Verdict</h3>
+    <p>اگر آپ کا بجٹ 45 ہزار کے قریب ہے اور آپ کو ایک بھروسہ مند، اچھی بیٹری لائف والا فون چاہیے، تو یہ ایک عمدہ انتخاب ہے۔ خاص طور پر ڈیلیوری یا فیلڈ ورک کرنے والوں کے لیے بہترین ہے۔</p>
+  </div>
+</div>
 
-  <div class="ad-slot">AdSense in-article unit — bottom (insert your ad code here)</div>
-
-</article>
+<div class="prose">
+  <div class="ad-slot">AdSense in-article unit — bottom</div>
+</div>
 
 <footer>
-  <div class="wrap">
-    <span>© 2026 TechFaisla. Sab huqooq mehfooz.</span>
-    <div class="foot-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </div>
+  <div class="footer-inner">
+    © 2026 TechFaisla. Sab huqooq mehfooz.
+    <div class="links"><a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a></div>
   </div>
 </footer>
 
