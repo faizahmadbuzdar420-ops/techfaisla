@@ -27,12 +27,10 @@
   }
   .mono{font-family:'JetBrains Mono', monospace;}
   .display{font-family:'Space Grotesk', sans-serif;}
-  .urdu{font-family:'Noto Nastaliq Urdu', serif; direction:rtl;}
 
   a{color:inherit; text-decoration:none;}
   img{max-width:100%; display:block;}
 
-  /* ===== NAV ===== */
   header{
     position:sticky; top:0; z-index:50;
     background:var(--paper); border-bottom:1px solid var(--line);
@@ -60,7 +58,6 @@
   }
   .lang-toggle button.active{background:var(--navy); color:var(--paper);}
 
-  /* ===== HERO ===== */
   .hero{
     background:var(--navy); color:var(--paper);
     position:relative; overflow:hidden;
@@ -84,7 +81,6 @@
     max-width:480px; line-height:1.6;
   }
 
-  /* price-tag sticker — the signature element */
   .verdict-tag{
     background:var(--paper); color:var(--navy);
     border-radius:14px; padding:16px 18px;
@@ -111,13 +107,11 @@
   .hero-tag-strip::-webkit-scrollbar{display:none;}
   .hero-tag-strip .verdict-tag{min-width:230px; flex-shrink:0;}
 
-  /* torn edge between hero and content */
   .tear{
     height:22px; background:var(--paper);
     clip-path: polygon(0% 100%,4% 40%,8% 100%,12% 40%,16% 100%,20% 40%,24% 100%,28% 40%,32% 100%,36% 40%,40% 100%,44% 40%,48% 100%,52% 40%,56% 100%,60% 40%,64% 100%,68% 40%,72% 100%,76% 40%,80% 100%,84% 40%,88% 100%,92% 40%,96% 100%,100% 40%,100% 100%);
   }
 
-  /* ===== SECTION LABELS ===== */
   .section{max-width:1120px; margin:0 auto; padding:64px 20px;}
   .section-head{
     display:flex; align-items:baseline; justify-content:space-between;
@@ -126,7 +120,6 @@
   .section-head h2{font-family:'Space Grotesk'; font-weight:700; font-size:26px;}
   .section-head .count{font-family:'JetBrains Mono'; font-size:13px; color:var(--slate);}
 
-  /* ===== ARTICLE CARDS ===== */
   .grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:20px;}
   .card{
     background:#fff; border:1px solid var(--line); border-radius:14px;
@@ -151,7 +144,6 @@
   .card-body .price{font-family:'JetBrains Mono'; font-weight:700; color:var(--navy); font-size:14px;}
   .card-body .score{font-family:'JetBrains Mono'; font-size:13px; color:var(--green); font-weight:700;}
 
-  /* ===== VALUE STRIP ===== */
   .value-strip{background:var(--paper-dim); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
   .value-grid{
     max-width:1120px; margin:0 auto; padding:40px 20px;
@@ -161,7 +153,6 @@
   .value-item .num{font-family:'JetBrains Mono'; font-size:28px; font-weight:700; color:var(--navy);}
   .value-item .label{font-size:13px; color:var(--slate); margin-top:4px;}
 
-  /* ===== FOOTER ===== */
   footer{background:var(--navy); color:rgba(246,243,237,0.6); padding:40px 20px;}
   .footer-inner{max-width:1120px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; font-size:13px;}
 
@@ -170,11 +161,8 @@
     .footer-inner{flex-direction:column;}
   }
 
-  [data-lang="ur"] body, body.lang-ur { font-family:'Noto Nastaliq Urdu', serif; }
-  body.lang-ur .display, body.lang-ur h1, body.lang-ur h2, body.lang-ur h3 { font-family:'Noto Nastaliq Urdu', serif; }
   body.lang-ur { direction:rtl; }
-  body.lang-ur .eyebrow::before{margin-left:8px;}
-  [data-en]{}
+  body.lang-ur .display, body.lang-ur h1, body.lang-ur h2, body.lang-ur h3 { font-family:'Noto Nastaliq Urdu', serif; }
   body.lang-ur [data-en]{display:none;}
   body:not(.lang-ur) [data-ur]{display:none;}
 </style>
@@ -206,34 +194,20 @@
     <p data-ur>پچاس ہزار روپے سے کم فونز پر ایماندار جائزے — کوئی مبالغہ نہیں، صرف حقیقت۔</p>
 
     <div class="hero-tag-strip">
-      <div class="verdict-tag">
-        <div class="verdict-score">8.4</div>
+      <a class="verdict-tag" href="infinix-hot-60-pro.html">
+        <div class="verdict-score">8.0</div>
         <div class="verdict-info">
-          <div class="name">Redmi 13C</div>
-          <div class="price">PKR 27,999</div>
+          <div class="name">Infinix Hot 60 Pro</div>
+          <div class="price">PKR 42,000–46,000</div>
         </div>
-      </div>
-      <div class="verdict-tag">
-        <div class="verdict-score">7.9</div>
+      </a>
+      <a class="verdict-tag" href="redmi-note-14-pro.html">
+        <div class="verdict-score">8.6</div>
         <div class="verdict-info">
-          <div class="name">Infinix Smart 8</div>
-          <div class="price">PKR 21,499</div>
+          <div class="name">Redmi Note 14 Pro</div>
+          <div class="price">PKR 44,999</div>
         </div>
-      </div>
-      <div class="verdict-tag">
-        <div class="verdict-score">8.1</div>
-        <div class="verdict-info">
-          <div class="name">Realme C55</div>
-          <div class="price">PKR 34,999</div>
-        </div>
-      </div>
-      <div class="verdict-tag">
-        <div class="verdict-score">7.6</div>
-        <div class="verdict-info">
-          <div class="name">Tecno Spark 20</div>
-          <div class="price">PKR 25,999</div>
-        </div>
-      </div>
+      </a>
     </div>
   </div>
   <div class="tear"></div>
@@ -242,7 +216,7 @@
 <div class="value-strip">
   <div class="value-grid">
     <div class="value-item">
-      <div class="num">50+</div>
+      <div class="num">2</div>
       <div class="label" data-en>Phones reviewed</div>
       <div class="label" data-ur>فونز کا جائزہ</div>
     </div>
@@ -263,54 +237,30 @@
   <div class="section-head">
     <h2 data-en>Latest Verdicts</h2>
     <h2 data-ur>تازہ ترین جائزے</h2>
-    <div class="count">04 ARTICLES</div>
+    <div class="count">02 ARTICLES</div>
   </div>
 
   <div class="grid">
-    <a class="card" href="#">
-      <div class="card-media"><span class="tag">BEST VALUE</span></div>
-      <div class="card-body">
-        <h3 data-en>Redmi 13C Review: The 28K King?</h3>
-        <h3 data-ur>ریڈمی 13C کا مکمل جائزہ</h3>
-        <div class="meta">
-          <span class="price">PKR 27,999</span>
-          <span class="score">8.4 / 10</span>
-        </div>
-      </div>
-    </a>
-
-    <a class="card" href="#">
-      <div class="card-media"><span class="tag">NEW</span></div>
-      <div class="card-body">
-        <h3 data-en>Realme C55 vs Infinix Note 30</h3>
-        <h3 data-ur>ریئل می سی 55 بمقابلہ انفینکس نوٹ 30</h3>
-        <div class="meta">
-          <span class="price">PKR 34,999</span>
-          <span class="score">8.1 / 10</span>
-        </div>
-      </div>
-    </a>
-
-    <a class="card" href="#">
+    <a class="card" href="infinix-hot-60-pro.html">
       <div class="card-media"><span class="tag">BUDGET PICK</span></div>
       <div class="card-body">
-        <h3 data-en>Infinix Smart 8: Worth it Under 22K?</h3>
-        <h3 data-ur>انفینکس اسمارٹ 8 کا جائزہ</h3>
+        <h3 data-en>Infinix Hot 60 Pro — Best Budget Phone Under 50K?</h3>
+        <h3 data-ur>انفینکس ہاٹ 60 پرو کا جائزہ</h3>
         <div class="meta">
-          <span class="price">PKR 21,499</span>
-          <span class="score">7.9 / 10</span>
+          <span class="price">PKR 42,000–46,000</span>
+          <span class="score">8.0 / 10</span>
         </div>
       </div>
     </a>
 
-    <a class="card" href="#">
-      <div class="card-media"><span class="tag">CAMERA</span></div>
+    <a class="card" href="redmi-note-14-pro.html">
+      <div class="card-media"><span class="tag">BEST VALUE</span></div>
       <div class="card-body">
-        <h3 data-en>Tecno Spark 20 Camera Test</h3>
-        <h3 data-ur>ٹیکنو اسپارک 20 کیمرہ ٹیسٹ</h3>
+        <h3 data-en>Redmi Note 14 Pro — Full Review</h3>
+        <h3 data-ur>ریڈمی نوٹ 14 پرو کا مکمل جائزہ</h3>
         <div class="meta">
-          <span class="price">PKR 25,999</span>
-          <span class="score">7.6 / 10</span>
+          <span class="price">PKR 44,999</span>
+          <span class="score">8.6 / 10</span>
         </div>
       </div>
     </a>
