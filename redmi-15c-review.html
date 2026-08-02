@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redmi 15C Review — TechFaisla | ریڈمی 15C ریویو</title>
+<meta name="description" content="Redmi 15C full review: price in Pakistan, specs, camera, battery and verdict. ریڈمی 15C کا مکمل ریویو اردو میں۔">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root{
+    --navy:#0b1f3a;
+    --navy-2:#132b4d;
+    --paper:#f7f3ea;
+    --green:#1f7a4d;
+    --amber:#e0a419;
+    --ink:#20242c;
+    --muted:#5b6472;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.65;
+  }
+  header{
+    background:var(--navy);
+    color:var(--paper);
+    padding:18px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  header .brand{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:1.3rem;
+    letter-spacing:.02em;
+  }
+  header .brand span{color:var(--amber);}
+  #langToggle{
+    background:var(--amber);
+    color:var(--navy);
+    border:none;
+    padding:8px 16px;
+    border-radius:20px;
+    font-weight:600;
+    font-size:.85rem;
+    cursor:pointer;
+  }
+  main{
+    max-width:760px;
+    margin:0 auto;
+    padding:28px 20px 60px;
+  }
+  .eyebrow{
+    color:var(--green);
+    font-weight:600;
+    font-size:.8rem;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+  }
+  h1{
+    font-family:'Fraunces',serif;
+    font-size:2rem;
+    line-height:1.15;
+    margin:8px 0 6px;
+    color:var(--navy);
+  }
+  .subhead{color:var(--muted); margin-bottom:24px;}
+
+  .price-tag{
+    background:var(--navy);
+    color:var(--paper);
+    border-radius:14px;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:20px 0 28px;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .price-tag .label{font-size:.8rem; color:#b9c4d6; text-transform:uppercase; letter-spacing:.06em;}
+  .price-tag .value{font-family:'Fraunces',serif; font-size:1.6rem; font-weight:700; color:var(--amber);}
+  .verdict-badge{
+    background:var(--green);
+    color:#fff;
+    border-radius:20px;
+    padding:6px 14px;
+    font-size:.85rem;
+    font-weight:600;
+  }
+
+  h2{
+    font-family:'Fraunces',serif;
+    color:var(--navy);
+    font-size:1.3rem;
+    margin-top:34px;
+    border-bottom:2px solid var(--amber);
+    padding-bottom:6px;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:14px 0;
+    font-size:.92rem;
+  }
+  table td{
+    padding:9px 6px;
+    border-bottom:1px solid #ddd6c4;
+  }
+  table td:first-child{color:var(--muted); width:38%;}
+  table td:last-child{font-weight:600;}
+
+  .pros-cons{display:flex; gap:16px; flex-wrap:wrap; margin:16px 0;}
+  .pros-cons > div{flex:1; min-width:220px; background:#fff; border-radius:12px; padding:16px;}
+  .pros{border-left:4px solid var(--green);}
+  .cons{border-left:4px solid #c0392b;}
+  .pros h3, .cons h3{margin-top:0; font-size:1rem; font-family:'Fraunces',serif;}
+  ul{padding-left:20px; margin:8px 0;}
+  li{margin-bottom:6px;}
+
+  .final{
+    background:#fff;
+    border-radius:14px;
+    padding:20px;
+    margin-top:28px;
+    border:1px solid #e5ddc7;
+  }
+
+  footer{
+    text-align:center;
+    padding:24px 20px;
+    color:var(--muted);
+    font-size:.8rem;
+  }
+
+  /* Urdu mode */
+  body.urdu{
+    font-family:'Noto Nastaliq Urdu', serif;
+    direction:rtl;
+  }
+  body.urdu h1, body.urdu h2, body.urdu .price-tag .value{
+    font-family:'Noto Nastaliq Urdu', serif;
+  }
+  body.urdu table td:first-child{width:45%;}
+  body.urdu .pros-cons{flex-direction:row-reverse;}
+  body.urdu .pros{border-left:none; border-right:4px solid var(--green);}
+  body.urdu .cons{border-left:none; border-right:4px solid #c0392b;}
+  body.urdu ul{padding-left:0; padding-right:20px;}
+
+  [data-en].hide, [data-ur].hide{display:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Tech<span>Faisla</span></div>
+  <button id="langToggle" onclick="toggleLang()">اردو / EN</button>
+</header>
+
+<main>
+  <div class="eyebrow" data-en>Budget Phone Review · Day 4</div>
+  <div class="eyebrow hide" data-ur>بجٹ فون ریویو · دن 4</div>
+
+  <h1 data-en>Redmi 15C Review: Big Battery, Bigger Screen, Small Price</h1>
+  <h1 class="hide" data-ur>ریڈمی 15C ریویو: بڑی بیٹری، بڑی اسکرین، چھوٹی قیمت</h1>
+
+  <p class="subhead" data-en>Xiaomi's newest entry-level phone packs a 6,000mAh battery and a 120Hz display — but is it worth it under PKR 35,000?</p>
+  <p class="subhead hide" data-ur>شیاومی کا نیا انٹری لیول فون 6000mAh بیٹری اور 120Hz ڈسپلے کے ساتھ آتا ہے — کیا یہ 35,000 روپے میں خریدنے کے قابل ہے؟</p>
+
+  <div class="price-tag">
+    <div>
+      <div class="label" data-en>Price in Pakistan</div>
+      <div class="label hide" data-ur>پاکستان میں قیمت</div>
+      <div class="value">PKR 33,999 – 38,999</div>
+    </div>
+    <div class="verdict-badge" data-en>Worth Buying</div>
+    <div class="verdict-badge hide" data-ur>خریدنے کے قابل</div>
+  </div>
+
+  <h2 data-en>Full Specifications</h2>
+  <h2 class="hide" data-ur>مکمل اسپیسیفیکیشنز</h2>
+  <table>
+    <tr><td data-en>Display</td><td data-ur class="hide">ڈسپلے</td><td>6.9" IPS LCD, HD+, 120Hz</td></tr>
+    <tr><td data-en>Chipset</td><td data-ur class="hide">چپ سیٹ</td><td>MediaTek Helio G81 Ultra</td></tr>
+    <tr><td data-en>RAM / Storage</td><td data-ur class="hide">ریم / اسٹوریج</td><td>4/6GB, 128GB</td></tr>
+    <tr><td data-en>Rear Camera</td><td data-ur class="hide">بیک کیمرہ</td><td>50MP main + auxiliary lens</td></tr>
+    <tr><td data-en>Front Camera</td><td data-ur class="hide">فرنٹ کیمرہ</td><td>8MP</td></tr>
+    <tr><td data-en>Battery</td><td data-ur class="hide">بیٹری</td><td>6000mAh, 33W wired charging</td></tr>
+    <tr><td data-en>Build</td><td data-ur class="hide">باڈی</td><td>Gorilla Glass 3, IP64 splash resistant</td></tr>
+    <tr><td data-en>OS</td><td data-ur class="hide">آپریٹنگ سسٹم</td><td>Android 15, HyperOS 2</td></tr>
+    <tr><td data-en>Network</td><td data-ur class="hide">نیٹ ورک</td><td>4G LTE only</td></tr>
+  </table>
+
+  <h2 data-en>Our Take</h2>
+  <h2 class="hide" data-ur>ہماری رائے</h2>
+  <p data-en>The Redmi 15C leans on the basics that budget buyers actually care about: a huge screen for watching videos, a battery that comfortably lasts a full day of heavy use, and a body that survives the odd splash or drop. The Helio G81 Ultra handles calls, browsing, and light gaming fine, but it will slow down with heavier apps — this is not a phone for PUBG on high settings.</p>
+  <p class="hide" data-ur>ریڈمی 15C ان بنیادی چیزوں پر توجہ دیتا ہے جو بجٹ خریدار واقعی چاہتے ہیں: ویڈیوز دیکھنے کے لیے بڑی اسکرین، ایک ایسی بیٹری جو بھاری استعمال کے باوجود پورا دن آرام سے چلے، اور ایک ایسی باڈی جو معمولی گرنے یا پانی کے چھینٹوں کو برداشت کر لے۔ Helio G81 Ultra کالز، براؤزنگ اور ہلکی گیمنگ میں ٹھیک کام کرتا ہے، لیکن بھاری ایپس میں سست ہو جاتا ہے — یہ ہائی سیٹنگز پر PUBG کھیلنے کے لیے فون نہیں ہے۔</p>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h3 data-en>Pros</h3>
+      <h3 class="hide" data-ur>خوبیاں</h3>
+      <ul data-en>
+        <li>Massive 6,000mAh battery, easily 1.5 days</li>
+        <li>Smooth 120Hz display for the price</li>
+        <li>IP64 splash resistance is rare at this price</li>
+        <li>Still has a headphone jack</li>
+      </ul>
+      <ul class="hide" data-ur>
+        <li>6000mAh کی بڑی بیٹری، آسانی سے ڈیڑھ دن چلتی ہے</li>
+        <li>اس قیمت میں 120Hz کا ہموار ڈسپلے</li>
+        <li>اس قیمت میں IP64 واٹر ریزسٹنس نایاب ہے</li>
+        <li>ہیڈفون جیک اب بھی موجود ہے</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h3 data-en>Cons</h3>
+      <h3 class="hide" data-ur>خامیاں</h3>
+      <ul data-en>
+        <li>No 5G on this variant</li>
+        <li>HD+ resolution looks soft on such a large screen</li>
+        <li>Low-light camera performance is weak</li>
+      </ul>
+      <ul class="hide" data-ur>
+        <li>اس ورژن میں 5G موجود نہیں</li>
+        <li>اتنی بڑی اسکرین پر HD+ ریزولوشن دھندلا لگتا ہے</li>
+        <li>کم روشنی میں کیمرہ کمزور ہے</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="final">
+    <h2 style="margin-top:0" data-en>Final Verdict</h2>
+    <h2 style="margin-top:0" class="hide" data-ur>حتمی فیصلہ</h2>
+    <p data-en>If your priority is battery life and screen size over raw speed or 5G, the Redmi 15C is one of the safest picks under PKR 35,000. Buyers who game heavily or need 5G should look elsewhere — but for calls, WhatsApp, YouTube, and everyday use, it delivers more than its price suggests.</p>
+    <p class="hide" data-ur>اگر آپ کی ترجیح رفتار یا 5G کی بجائے بیٹری لائف اور اسکرین سائز ہے، تو ریڈمی 15C 35,000 روپے سے کم میں سب سے محفوظ انتخاب ہے۔ زیادہ گیمنگ کرنے والے یا 5G چاہنے والے کہیں اور دیکھیں — لیکن کالز، واٹس ایپ، یوٹیوب اور روزمرہ استعمال کے لیے یہ اپنی قیمت سے زیادہ دیتا ہے۔</p>
+  </div>
+</main>
+
+<footer>
+  <span data-en>TechFaisla — Honest budget phone reviews.</span>
+  <span class="hide" data-ur>TechFaisla — بجٹ فونز کے ایماندار ریویوز۔</span>
+</footer>
+
+<script>
+function toggleLang(){
+  document.body.classList.toggle('urdu');
+  document.querySelectorAll('[data-en]').forEach(el => el.classList.toggle('hide'));
+  document.querySelectorAll('[data-ur]').forEach(el => el.classList.toggle('hide'));
+}
+</script>
+
+</body>
+</html>
