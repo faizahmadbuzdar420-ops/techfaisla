@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vivo Y29 Review — TechFaisla</title>
+<style>
+  :root{
+    --navy:#0F2A47;
+    --navy-deep:#081A2E;
+    --paper:#F6F1E4;
+    --paper-line:#E4DBC4;
+    --green:#2E7D4F;
+    --amber:#C68A2E;
+    --ink:#20242A;
+    --ink-soft:#5B6570;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Georgia","Noto Nastaliq Urdu","Segoe UI",serif;
+    line-height:1.6;
+  }
+  .topbar{
+    background:var(--navy);
+    color:var(--paper);
+    padding:18px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .brand{
+    font-family:"Georgia",serif;
+    font-weight:700;
+    font-size:1.3rem;
+    letter-spacing:0.5px;
+  }
+  .brand span{color:var(--amber);}
+  .lang-toggle{
+    display:flex;
+    background:var(--navy-deep);
+    border-radius:999px;
+    padding:4px;
+    gap:4px;
+  }
+  .lang-toggle button{
+    border:none;
+    background:transparent;
+    color:var(--paper);
+    padding:8px 18px;
+    border-radius:999px;
+    font-size:0.9rem;
+    cursor:pointer;
+    font-family:inherit;
+    transition:background 0.2s ease;
+  }
+  .lang-toggle button.active{
+    background:var(--amber);
+    color:var(--navy-deep);
+    font-weight:700;
+  }
+  main{
+    max-width:760px;
+    margin:0 auto;
+    padding:32px 20px 60px;
+  }
+  h1{
+    font-size:1.9rem;
+    margin:0 0 6px;
+    color:var(--navy);
+    border-bottom:3px solid var(--navy);
+    padding-bottom:14px;
+  }
+  .price-tag{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--navy);
+    color:var(--paper);
+    padding:10px 22px 10px 30px;
+    margin:22px 0;
+    font-size:1.05rem;
+    font-weight:600;
+    clip-path:polygon(18px 0, 100% 0, 100% 100%, 18px 100%, 0 50%);
+  }
+  .price-tag::after{
+    content:"";
+    position:absolute;
+    left:8px;
+    top:50%;
+    transform:translateY(-50%);
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--paper);
+  }
+  .verdict{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:1.15rem;
+    padding:14px 20px;
+    border-radius:6px;
+    margin:8px 0 28px;
+  }
+  .verdict.buy{ background:rgba(46,125,79,0.12); color:var(--green); border:2px solid var(--green); }
+  .verdict.consider{ background:rgba(198,138,46,0.14); color:var(--amber); border:2px solid var(--amber); }
+  .verdict .dot{
+    width:12px;height:12px;border-radius:50%;
+    background:currentColor;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:24px 0 32px;
+    background:#fff;
+    border:1px solid var(--paper-line);
+  }
+  th,td{
+    text-align:left;
+    padding:10px 14px;
+    border-bottom:1px solid var(--paper-line);
+    font-size:0.95rem;
+  }
+  th{
+    background:var(--navy);
+    color:var(--paper);
+    font-weight:600;
+    width:38%;
+  }
+  tr:last-child td{border-bottom:none;}
+  h2{
+    color:var(--navy);
+    font-size:1.25rem;
+    margin-top:36px;
+    padding-left:12px;
+    border-left:5px solid var(--amber);
+  }
+  p{ color:var(--ink); font-size:1.02rem; }
+  .disclaimer{
+    margin-top:40px;
+    padding-top:18px;
+    border-top:1px dashed var(--paper-line);
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    font-style:italic;
+  }
+  [dir="rtl"]{ font-family:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq","Georgia",serif; text-align:right; }
+  .lang-block{ display:none; }
+  .lang-block.active{ display:block; }
+  @media (max-width:600px){
+    h1{font-size:1.5rem;}
+    .price-tag{font-size:0.95rem;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Tech<span>Faisla</span></div>
+  <div class="lang-toggle">
+    <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+    <button id="btn-ur" onclick="setLang('ur')">اردو</button>
+  </div>
+</div>
+
+<main>
+
+  <!-- ENGLISH -->
+  <section class="lang-block active" id="block-en">
+    <h1>vivo Y29 Review — Big Battery, Big Screen on a Budget</h1>
+
+    <div class="price-tag">PKR 44,799 – 54,299 &nbsp;·&nbsp; 8GB/128GB &amp; 8GB/256GB</div>
+
+    <div class="verdict consider">
+      <span class="dot"></span> CONSIDER — Great battery and display size, but no 5G and a mid-range chipset hold it back from a full BUY.
+    </div>
+
+    <table>
+      <tr><th>Display</th><td>6.68" IPS LCD, 120Hz, 720×1608</td></tr>
+      <tr><th>Chipset</th><td>Qualcomm Snapdragon 685 (6nm)</td></tr>
+      <tr><th>RAM/Storage</th><td>8GB / 128GB, 8GB / 256GB</td></tr>
+      <tr><th>Rear Camera</th><td>50MP Dual</td></tr>
+      <tr><th>Front Camera</th><td>8MP</td></tr>
+      <tr><th>Battery</th><td>6500mAh, 44W fast charging</td></tr>
+      <tr><th>OS</th><td>Android 15, Funtouch OS 15</td></tr>
+      <tr><th>Fingerprint</th><td>Side-mounted</td></tr>
+      <tr><th>Storage Expansion</th><td>microSD supported</td></tr>
+      <tr><th>Network</th><td>4G LTE only — no 5G (Pakistan variant)</td></tr>
+    </table>
+
+    <h2>Review</h2>
+    <p>The <strong>vivo Y29</strong> leans hard into two things budget buyers actually care about: screen size and battery life. The 6.68-inch IPS LCD panel with a 120Hz refresh rate makes everyday scrolling feel smooth, even though it's LCD rather than AMOLED — so blacks won't be as deep, but the higher refresh rate makes up for a lot of that in daily use.</p>
+
+    <p>The real standout is the <strong>6500mAh battery paired with 44W fast charging</strong>. That's a genuinely large cell for this price bracket, and it easily pushes past a full day of moderate to heavy use — video, social media, calls — without needing a midday top-up. The 50MP dual rear camera handles daylight shots well, though the setup lacks a dedicated ultrawide or telephoto lens, so it's a "one good camera" phone rather than a versatile one.</p>
+
+    <p>The <strong>Snapdragon 685</strong> is a solid, dependable mid-range chipset — fine for everyday apps and light gaming, but it'll show its limits with heavier games or multitasking. And like most phones in this bracket sold in Pakistan, the standard Y29 is <strong>4G-only</strong>; a separate Y29 5G variant exists but isn't the one commonly stocked locally yet.</p>
+
+    <p><strong>Bottom line:</strong> If battery life and screen size matter more to you than camera versatility or 5G, the Y29 is a dependable pick. If you want AMOLED or a sharper camera setup at a similar price, it's worth cross-checking against the Infinix Hot 60 Pro.</p>
+
+    <div class="disclaimer">Prices are approximate and vary by city/retailer — always confirm current price before buying.</div>
+  </section>
+
+  <!-- URDU -->
+  <section class="lang-block" id="block-ur" dir="rtl">
+    <h1>ویوو Y29 ریویو — بجٹ میں بڑی بیٹری، بڑی اسکرین</h1>
+
+    <div class="price-tag">PKR 44,799 – 54,299 &nbsp;·&nbsp; 8GB/128GB اور 8GB/256GB</div>
+
+    <div class="verdict consider">
+      <span class="dot"></span> غور کریں — بیٹری اور اسکرین سائز بہترین ہیں، لیکن 5G نہ ہونا اور معمولی چپ سیٹ اسے مکمل "خریدیں" کیٹیگری سے پیچھے رکھتے ہیں۔
+    </div>
+
+    <table>
+      <tr><th>ڈسپلے</th><td>6.68 انچ IPS LCD، 120Hz، 720×1608</td></tr>
+      <tr><th>چپ سیٹ</th><td>Qualcomm Snapdragon 685 (6nm)</td></tr>
+      <tr><th>ریم/اسٹوریج</th><td>8GB / 128GB، 8GB / 256GB</td></tr>
+      <tr><th>ریئر کیمرہ</th><td>50MP ڈوئل</td></tr>
+      <tr><th>فرنٹ کیمرہ</th><td>8MP</td></tr>
+      <tr><th>بیٹری</th><td>6500mAh، 44W فاسٹ چارجنگ</td></tr>
+      <tr><th>او ایس</th><td>Android 15، Funtouch OS 15</td></tr>
+      <tr><th>فنگر پرنٹ</th><td>سائیڈ ماونٹڈ</td></tr>
+      <tr><th>اسٹوریج ایکسپینشن</th><td>microSD سپورٹڈ</td></tr>
+      <tr><th>نیٹ ورک</th><td>صرف 4G LTE — کوئی 5G نہیں (پاکستانی ورژن)</td></tr>
+    </table>
+
+    <h2>ریویو</h2>
+    <p><strong>ویوو Y29</strong> بجٹ خریداروں کی دو اہم ضرورتوں پر خاص توجہ دیتا ہے: اسکرین سائز اور بیٹری ٹائمنگ۔ 6.68 انچ کا IPS LCD پینل 120Hz ریفریش ریٹ کے ساتھ روزمرہ استعمال میں کافی smooth محسوس ہوتا ہے، اگرچہ یہ AMOLED نہیں بلکہ LCD ہے — تو کالے رنگ اتنے گہرے نہیں ہوں گے، لیکن زیادہ ریفریش ریٹ روزمرہ استعمال میں اس کمی کو کافی حد تک پورا کر دیتا ہے۔</p>
+
+    <p>سب سے نمایاں چیز <strong>6500mAh بیٹری اور 44W فاسٹ چارجنگ</strong> ہے۔ اس قیمت میں یہ واقعی بڑی بیٹری ہے، اور درمیانے سے زیادہ استعمال — ویڈیوز، سوشل میڈیا، کالز — کے باوجود بھی پورا دن آرام سے چل جاتی ہے۔ 50 میگاپکسل ڈوئل ریئر کیمرہ دن کی روشنی میں اچھی تصاویر لیتا ہے، البتہ اس میں الگ سے الٹرا وائیڈ یا ٹیلی فوٹو لینس موجود نہیں۔</p>
+
+    <p><strong>Snapdragon 685</strong> ایک بھروسہ مند مڈ رینج چپ سیٹ ہے — روزمرہ ایپس اور ہلکی گیمنگ کے لیے ٹھیک ہے، لیکن بھاری گیمز یا ملٹی ٹاسکنگ میں اس کی حد نظر آنے لگتی ہے۔ اور اس بجٹ رینج کے زیادہ تر فونز کی طرح، معیاری Y29 بھی <strong>صرف 4G سپورٹ کرتا ہے</strong>۔</p>
+
+    <p><strong>خلاصہ:</strong> اگر آپ کے لیے بیٹری ٹائمنگ اور اسکرین سائز، کیمرے کی ورسٹائلٹی یا 5G سے زیادہ اہم ہیں، تو Y29 ایک بھروسہ مند انتخاب ہے۔</p>
+
+    <div class="disclaimer">قیمتیں تخمینی ہیں اور شہر/دکاندار کے مطابق مختلف ہو سکتی ہیں — خریدنے سے پہلے موجودہ قیمت ضرور چیک کریں۔</div>
+  </section>
+
+</main>
+
+<script>
+  function setLang(lang){
+    document.getElementById('block-en').classList.toggle('active', lang === 'en');
+    document.getElementById('block-ur').classList.toggle('active', lang === 'ur');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-ur').classList.toggle('active', lang === 'ur');
+  }
+</script>
+
+</body>
+</html>
